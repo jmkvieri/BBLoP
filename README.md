@@ -40,28 +40,28 @@ The final model used for the Muisca case study was the most computationally expe
 
 Finally, an index of the tables and figures contained within the article and in the Supplementary Material (if created in R), and the associated scripts and output file names.
 
-| Table                     | Scripts                                                                                | Output files                                          |
-|---------------------|-------------------------|-----------------------------|
-| 1            |  "./3-part3/tables/model_summary.R"                                   | "./3-part3/tables/summary_post.csv"   |
-| S3            |  "./S-supplementarymaterials/tables/sample_sizes.R"   |"./S-supplementarymaterials/tables/sample_sizes.csv" |
-| S6            |  "./S-supplementarymaterials/analysis/model_comparison.R"   | "./S-supplementarymaterials/tables/loo_model_comparison.csv"  |
+| Table               | Scripts                                                     | Output files                                                  |
+|---------------------|-------------------------------------------------------------|---------------------------------------------------------------|
+| 1                   |  "./3-part3/tables/model_summary.R"                         | "./3-part3/tables/summary_post.csv"                           |
+| S3                  |  "./S-supplementarymaterials/tables/sample_sizes.R"         |"./S-supplementarymaterials/tables/sample_sizes.csv"           |
+| S6                  |  "./S-supplementarymaterials/analysis/model_comparison.R"   | "./S-supplementarymaterials/tables/loo_model_comparison.csv"  |
 
 
 
-| Figure              | Scripts                                                                                | Output files                                          |
-|---------------------|-------------------------|-----------------------------|
-| 2            |  "./1-part1/simulation/beta_densities.R"                                  | "./1-part1/figures/beta_densities.png"   |
-| 3            |  "./1-part1/simulation/betareg_type1.R"                                   | "./1-part1/figures/simulated_model_performance.png"   |
-| 4            |  "./1-part1/simulation/betareg_type2.R"                                   | "./1-part1/figures/sim_comp_pred[...].png"   |
-|                     |                                                                           | "./1-part1/figures/sim_comp_SD_pred[...].png"   |
-| 5            |  "./2-part2/simulation/betareg_type3.R"                                   | "./2-part2/figures/"simulated_multi.png"   |
-| 8            |  "./3-part3/analysis/model_predictions_type1and2.R"                       | "./3-part3/figures/"aginau_vol_average.png"   |
-|                     |                                                                           | "./3-part3/figures/"aginau_vol_disp.png"   |
-| 9            |   "./3-part3/analysis/model_predictions_type3.R"                          | "./3-part3/figures/"aginau_orn_mun.png"   |
-|                     |                                                                           | "./3-part3/figures/"aginau_vot_mun.png"   |
-| S1           |   "./S-supplementarymaterials/analysis/log_transformation_skewness.R"     | "./S-supplementarymaterials/figures/"log_skewness.png"   |
-| S2           |   "./S-supplementarymaterials/analysis/exploratory_scatterplot.R"         | "./S-supplementarymaterials/figures/"exploratory_muisca_aginau.png"   |
-| S3           |   "./S-supplementarymaterials/analysis/model_comparison.R"                | "./S-supplementarymaterials/figures/"aginau_model_comp.png"   |
+| Figure       | Scripts                                                                   | Output files                                                       |
+|--------------|---------------------------------------------------------------------------|--------------------------------------------------------------------|
+| 2            |  "./1-part1/simulation/beta_densities.R"                                  | "./1-part1/figures/beta_densities.png"                             |
+| 3            |  "./1-part1/simulation/betareg_type1.R"                                   | "./1-part1/figures/simulated_model_performance.png"                |
+| 4            |  "./1-part1/simulation/betareg_type2.R"                                   | "./1-part1/figures/sim_comp_pred[...].png"                         |
+|              |                                                                           | "./1-part1/figures/sim_comp_SD_pred[...].png"                      |
+| 5            |  "./2-part2/simulation/betareg_type3.R"                                   | "./2-part2/figures/"simulated_multi.png"                           |
+| 8            |  "./3-part3/analysis/model_predictions_type1and2.R"                       | "./3-part3/figures/"aginau_vol_average.png"                        |
+|              |                                                                           | "./3-part3/figures/"aginau_vol_disp.png"                           |
+| 9            |   "./3-part3/analysis/model_predictions_type3.R"                          | "./3-part3/figures/"aginau_orn_mun.png"                            |
+|              |                                                                           | "./3-part3/figures/"aginau_vot_mun.png"                            |
+| S1           |   "./S-supplementarymaterials/analysis/log_transformation_skewness.R"     | "./S-supplementarymaterials/figures/"log_skewness.png"             |
+| S2           |   "./S-supplementarymaterials/analysis/exploratory_scatterplot.R"         | "./S-supplementarymaterials/figures/"exploratory_muisca_aginau.png"|
+| S3           |   "./S-supplementarymaterials/analysis/model_comparison.R"                | "./S-supplementarymaterials/figures/"aginau_model_comp.png"        |
 
 # R Session info
 
