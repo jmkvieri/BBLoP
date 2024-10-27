@@ -55,8 +55,7 @@ Finally, an index of the tables and figures contained within the article and in 
 | 4            |  "./1-part1/simulation/betareg_type2.R"                                   | "./1-part1/figures/sim_comp_pred[...].png"                         |
 |              |                                                                           | "./1-part1/figures/sim_comp_SD_pred[...].png"                      |
 | 5            |  "./2-part2/simulation/betareg_type3.R"                                   | "./2-part2/figures/"simulated_multi.png"                           |
-| 8            |  "./3-part3/analysis/model_predictions_type1and2.R"                       | "./3-part3/figures/"aginau_vol_average.png"                        |
-|              |                                                                           | "./3-part3/figures/"aginau_vol_disp.png"                           |
+| 8            |  "./3-part3/analysis/model_predictions_type1and2.R"                       | "./3-part3/figures/"aginau_vol.png"                                |
 | 9            |   "./3-part3/analysis/model_predictions_type3.R"                          | "./3-part3/figures/"aginau_orn_mun.png"                            |
 |              |                                                                           | "./3-part3/figures/"aginau_vot_mun.png"                            |
 | S1           |   "./S-supplementarymaterials/analysis/log_transformation_skewness.R"     | "./S-supplementarymaterials/figures/"log_skewness.png"             |

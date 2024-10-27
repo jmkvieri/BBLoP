@@ -2,6 +2,7 @@
 library(here)
 library(ggplot2)
 library(rstan)
+library(gridExtra)
 
 load(here("3-part3","model_outputs","aginau_model.RData"))
 load(here("3-part3","data","aginau_data.RData"))
@@ -30,18 +31,19 @@ scale_x <-
 
 
 My_Theme = theme(
-  axis.title.x = element_text(size = 46,vjust = -0.75),
-  axis.text.x = element_text(size = 44),
-  axis.text.y = element_text(size = 44),
-  axis.title.y = element_text(size = 46, vjust=5),
-  legend.text = element_text(size = 46),
-  legend.title = element_text(size = 46),
+  axis.title.x = element_text(size = 66,vjust = -0.75),
+  axis.text.x = element_text(size = 64),
+  axis.text.y = element_text(size = 64),
+  axis.title.y = element_text(size = 66, vjust=5),
+  legend.text = element_text(size = 66),
+  legend.title = element_text(size = 66),
   legend.position = "bottom",
   legend.box.spacing = unit(85, "pt"),
   legend.key.size = unit(2, "cm"),
-  panel.grid = element_line(size = 1.5,
+  panel.grid = element_line(size = 2.5,
                             linetype = 2),
-  plot.margin = unit(c(1,2,1,2), "cm"))
+  plot.margin = unit(c(1,2,1,2), "cm"),
+  plot.title = element_text(size = 80))
 
 
 scale_y <-
@@ -135,7 +137,7 @@ orn_var_PI95 <- apply((orn * (1 - orn)) / (orn_phi + 1) * 0.4, 2, quantile, prob
 
 #create and save plots for mu
 
-graph <- ggplot() +
+graph_mean <- ggplot() +
   geom_ribbon(aes(
     x = vol.seq,
     ymin = vot_PI95[1, ],
@@ -150,7 +152,7 @@ graph <- ggplot() +
     color = "Adornment",
     fill="Adornment"),
     alpha = 0.20) +
-geom_line(aes(x = vol.seq, y = vot_mean),
+  geom_line(aes(x = vol.seq, y = vot_mean),
           color = "#F8766D",
           linewidth = 4) +
   geom_line(aes(x = vol.seq, y = orn_mean),
@@ -160,58 +162,49 @@ geom_line(aes(x = vol.seq, y = vot_mean),
   scale_color_manual(name="Object type",
                      values = c("Votive figure" = "#F8766D",  "Adornment" = "#00BFC4")) + 
   scale_fill_manual(name="Object type",
-                    values = c("Votive figure" = "#F8766D",  "Adornment" = "#00BFC4"))
+                    values = c("Votive figure" = "#F8766D",  "Adornment" = "#00BFC4")) +
+  ggtitle("A")
 
 
-png( file = here("3-part3","figures","aginau_vol_average.png"),
-     height = 1754,
-     width = 1754)
 
-print(graph)
-
-dev.off()
-
-
-#create and save plots for dispersion
-
-graph <- ggplot() + 
+graph_disp <- ggplot() + 
   geom_ribbon(aes(
-    x = vol.seq,
-    ymin = sqrt(orn_var_PI95[1, ]),
-    ymax = sqrt(orn_var_PI95[2, ]),
-    color="Adornment",
+    x = vol.seq, 
+    ymin = sqrt(orn_var_PI95[1, ]), 
+    ymax = sqrt(orn_var_PI95[2, ]), 
+    color="Adornment", 
     fill="Adornment"
-  ), alpha = 0.10) +
+  ), alpha = 0.20) + 
   geom_ribbon(aes(
-    x = vol.seq,
-    ymin = sqrt(vot_var_PI95[1, ]),
-    ymax = sqrt(vot_var_PI95[2, ]),
-    color="Votive figure",
+    x = vol.seq, 
+    ymin = sqrt(vot_var_PI95[1, ]), 
+    ymax = sqrt(vot_var_PI95[2, ]), 
+    color="Votive figure", 
     fill="Votive figure"
-  ), alpha = 0.10) +
-  geom_ribbon(aes(
-    x = vol.seq,
-    ymin = sqrt(orn_var_PI95[1, ]),
-    ymax = sqrt(orn_var_PI95[2, ]),
-    color="Adornment"
-  ), alpha = 0.10) +
-  geom_line(aes(x = vol.seq, y = sqrt(vot_var_mean)),
-            linewidth = 4,
-            colour = "#F8766D") +
-  geom_line(aes(x = vol.seq, y = sqrt(orn_var_mean)),
-            linewidth = 4,
-            colour = "#00BFC4") + scale_y2 +
-  My_Theme + ylab("SD of Ag-in-Au (wt%)") + xlab(bquote("Volume (" * cm^3 * ")")) + scale_x + 
-  scale_color_manual(name="Object type",
-                     values = c("Votive figure" = "#F8766D",  "Adornment" = "#00BFC4")) + 
-  scale_fill_manual(name="Object type",
-                    values = c("Votive figure" = "#F8766D",  "Adornment" = "#00BFC4"))
+  ), alpha = 0.20) +
+  geom_line(aes(x = vol.seq, y = sqrt(vot_var_mean)), linewidth = 4, color = "#F8766D") +
+  geom_line(aes(x = vol.seq, y = sqrt(orn_var_mean)), linewidth = 4, color = "#00BFC4") + 
+  scale_y2 + 
+  My_Theme + 
+  ylab("SD of Ag-in-Au (wt%)") + 
+  xlab(bquote("Volume (" * cm^3 * ")")) + 
+  scale_x + 
+  scale_color_manual(
+    name="Object type", 
+    values = c("Votive figure" = "#F8766D", "Adornment" = "#00BFC4")
+  ) + 
+  scale_fill_manual(
+    name="Object type", 
+    values = c("Votive figure" = "#F8766D", "Adornment" = "#00BFC4")
+  ) + 
+  ggtitle("B")
 
-png(file =  here("3-part3","figures","aginau_vol_disp.png"),
+
+png(file =  here("3-part3","figures","aginau_vol.png"),
     height = 1754,
-    width = 1754)
+    width = 3740)
 
-print(graph)
+grid.arrange(graph_mean,graph_disp,ncol=2)
 
 dev.off()
 

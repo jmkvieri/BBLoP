@@ -172,13 +172,13 @@ for (i in 1:length(unique(hypo_dataset$cluster))) {
 
 #Plot hypo simulations-----------------------------------------------------------------
 png(file = here("2-part2","figures","simulated_multi.png"),
-    width = 1040,
-    height = 1548)
+    width = 2394,
+    height = 3543)
 
 par(
   mfrow = c(3, 1),
-  lwd = 2,
-  cex = 2,
+  lwd = 5,
+  cex = 5,
   mar = c(4, 4, 2, 2),
   omi = c(0.2, 0.2, 0.2, 0.2)
 )

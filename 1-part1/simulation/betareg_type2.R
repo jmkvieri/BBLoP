@@ -2,6 +2,7 @@
 library(here)
 library(rstan)
 library(ggplot2)
+library(scales)
 
 #Helper functions--------------------------------------------------------------
 inv_logit <- function(x) {
@@ -54,8 +55,6 @@ for (i in 1:length(gamma_list)) {
                           data = simulated[[i]])
   
   
-  plot(simulated[[i]])
-  
   #RUN FINAL MODELS-----------------------------------------------------------------------------
   
   #pass data to stan
@@ -106,14 +105,11 @@ scale_x <-
 #adjust theme
 
 My_Theme = theme(
-  axis.title.x = element_text(size = 26,vjust = -0.75),
-  axis.text.x = element_text(size = 24),
-  axis.text.y = element_text(size = 24),
-  axis.title.y = element_text(size = 26),
-  legend.text = element_text(size = 26),
-  legend.title = element_text(size = 26),
-  legend.position = "bottom",
-  legend.box.spacing = unit(25, "pt"))
+  axis.title.x = element_text(size = 51,vjust = -0.75),
+  axis.text.x = element_text(size = 49),
+  axis.text.y = element_text(size = 49),
+  axis.title.y = element_text(size = 51),
+  plot.margin = margin(t = 5, r = 5, b = 60, l = 5))
 
 #create empty lists
 pred <-  list()
@@ -174,16 +170,16 @@ for (i in 1:3) {
     ), alpha = 0.20) +
     ylim(c(0, 1)) +
     geom_line(aes(x = pred.seq, y = pred_mean[[i]]),
-              linewidth = 1.5,
+              linewidth = 3.5,
               colour = "#F8766D") + scale_x +
-    geom_point(aes(x = simulated[[i]]$x_1, y = simulated[[i]]$comp), size = 2) +
-    My_Theme + ylab("Predicted mean +/- SD of element") + xlab("Predictor")
+    geom_point(aes(x = simulated[[i]]$x_1, y = simulated[[i]]$comp), size = 3.5) +
+    My_Theme + ylab("Predicted mean +/- SD of proportion") + xlab("Predictor")
   
   png(
     file = paste(
       here("1-part1","figures","sim_comp_pred"),i,".png",sep=""),
-      height=1000,
-      width=1000
+      height=1240,
+      width=1240
   )
   
   print(graph)
@@ -196,17 +192,17 @@ for (i in 1:3) {
       ymin = sqrt(pred_var_PI95[[i]][1, ]),
       ymax = sqrt(pred_var_PI95[[i]][2, ])
     ), alpha = 0.20) +
-    ylim(c(0, 0.35)) +
+    scale_y_continuous(limits = c(0, 0.35), labels = label_number(accuracy = 0.01)) + 
     geom_line(aes(x = pred.seq, y = sqrt(pred_var_mean[[i]])),
-              linewidth = 1.5,
+              linewidth = 3.5,
               colour = "#F8766D") + scale_x +
-    My_Theme + ylab("SD of element (wt%)") + xlab("Predictor")
+    My_Theme + ylab("SD of proportion (wt%)") + xlab("Predictor")
   
   png(
     file = paste(
       here("1-part1","figures","sim_comp_SD_pred"),i,".png",sep=""),
-      height=1000,
-      width=1000
+      height=1240,
+      width=1240
   )
   
   print(graph)
