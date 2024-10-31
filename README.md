@@ -3,7 +3,7 @@
 This repository contains the data and scripts used in the manuscript:
 
 ```         
-  Vieri et al., submitted. Beyond baselines of performance: beta regression models of compositional variability in craft production studies
+  Vieri et al., accepted. Beyond baselines of performance: beta regression models of compositional variability in craft production studies. Journal of Archaeological Science
 ```
 
 # Structure
