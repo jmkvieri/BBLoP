@@ -92,14 +92,16 @@ palette(col_vector)
 
 #adornments
 
-png(file=here("3-part3","figures","aginau_orn_mun.png"),
-    width=1500,
-    height=800
+png(file=here("3-part3","figures","aginau_mun.png"),
+    width=3740,
+    height=1500
 )
 
-par(cex=1.5,
-    cex.lab=1.5,
-    cex.main=1.5,
+par(mfrow=c(1,2),
+    cex=2,
+    cex.lab=2,
+    cex.axis=1.75,
+    cex.main=2.25,
     mar=c(5, 6, 4, 2))
 
 
@@ -110,7 +112,7 @@ plot(
   bg = adorns_no$no,
   ylab = "Ag-in-Au (wt%)",
   xlab = "",
-  main = c("Predicted average Ag-in-Au per cluster for adornments"),
+  main = c("A) Predicted average Ag-in-Au per cluster for adornments"),
   yaxt = "n",
   xaxt = "n",
   ylim = c(0.07,0.3)
@@ -135,20 +137,6 @@ text(
   offset = 2
 )
 
-dev.off()
-
-
-#votive figures
-
-png(file=here("3-part3","figures","aginau_vot_mun.png"),
-    width=1500,
-    height=800
-)
-
-par(cex=1.5,
-    cex.lab=1.5,
-    cex.main=1.5,
-    mar=c(5, 6, 4, 2))
 
 plot(
   y_rep_votive,
@@ -160,7 +148,7 @@ plot(
   yaxt = "n",
   xaxt = "n",
   ylim = c(0.07,0.3),
-  main = c("Predicted average Ag-in-Au per cluster for votive figures")
+  main = c("B) Predicted average Ag-in-Au per cluster for votive figures")
 )
 
 axis(2, c(0.05,0.1,0.15,0.2,0.25,0.3), c(5,10,15,20,25,30))

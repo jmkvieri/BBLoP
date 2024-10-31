@@ -1,6 +1,5 @@
 #Load packages and data--------------------------------------------------------
 library(rstan)
-library(rethinking)
 library(xtable)
 library(here)
 
