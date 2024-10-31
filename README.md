@@ -8,7 +8,7 @@ This repository contains the data and scripts used in the manuscript:
 
 # Structure
 
-The user can download the whole contents in bulk, with all of the analyses designed to be run on a script-by-script basis. The repository is organised into four main sections as follows:
+The user can download the whole contents in bulk, with all of the analyses designed to be run on a script-by-script basis. The repository is organised into five main sections in accordance with the organisation of the manuscript (e.g., with 1-part1 containing the code used in Part I of the manuscript), as follows:
 
 | FOLDER                                 | DESCRIPTION                                                                                   |
 |----------------------------------------|--------------------------|
