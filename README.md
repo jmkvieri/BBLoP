@@ -68,23 +68,35 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] scales_1.2.1        RColorBrewer_1.1-3  reshape2_1.4.4      brms_2.19.0         Rcpp_1.0.11         ggplot2_3.4.4.9000  rstan_2.26.22       StanHeaders_2.26.27
-[9] here_1.0.1         
+ [1] RColorBrewer_1.1-3  gridExtra_2.3       reshape2_1.4.4      brms_2.19.0        
+ [5] ggplot2_3.5.1       scales_1.3.0        rstanarm_2.21.4     Rcpp_1.0.11        
+ [9] here_1.0.1          xtable_1.8-4        rstan_2.26.22       StanHeaders_2.26.27
 
 loaded via a namespace (and not attached):
- [1] tidyselect_1.2.1     dplyr_1.1.2          farver_2.1.1         loo_2.7.0            fastmap_1.1.1        tensorA_0.36.2       shinystan_2.6.0     
- [8] shinyjs_2.1.0        promises_1.2.0.1     digest_0.6.33        estimability_1.4.1   mime_0.12            lifecycle_1.0.4      ellipsis_0.3.2      
-[15] processx_3.8.2       magrittr_2.0.3       posterior_1.5.0      compiler_4.3.1       rlang_1.1.2          tools_4.3.1          igraph_1.5.0        
-[22] utf8_1.2.4           labeling_0.4.3       prettyunits_1.1.1    bridgesampling_1.1-2 htmlwidgets_1.6.2    pkgbuild_1.4.2       curl_5.2.1          
-[29] plyr_1.8.9           dygraphs_1.1.1.6     abind_1.4-5          miniUI_0.1.1.1       withr_2.5.2          grid_4.3.1           stats4_4.3.1        
-[36] fansi_1.0.5          xts_0.13.1           xtable_1.8-4         colorspace_2.1-0     inline_0.3.19        emmeans_1.8.9        gtools_3.9.4        
-[43] cli_3.6.1            mvtnorm_1.2-2        crayon_1.5.2         generics_0.1.3       RcppParallel_5.1.7   rstudioapi_0.15.0    stringr_1.5.0       
-[50] shinythemes_1.2.0    bayesplot_1.10.0     parallel_4.3.1       matrixStats_1.0.0    base64enc_0.1-3      vctrs_0.6.4          V8_4.3.2            
-[57] Matrix_1.6-0         jsonlite_1.8.7       callr_3.7.3          crosstalk_1.2.0      glue_1.6.2           codetools_0.2-19     ps_1.7.5            
-[64] DT_0.28              distributional_0.3.2 stringi_1.7.12       gtable_0.3.4         later_1.3.1          munsell_0.5.0        tibble_3.2.1        
-[71] colourpicker_1.2.0   pillar_1.9.0         htmltools_0.5.5      Brobdingnag_1.2-9    R6_2.5.1             rprojroot_2.0.3      shiny_1.7.4.1       
-[78] lattice_0.21-8       markdown_1.7         backports_1.4.1      threejs_0.3.3        httpuv_1.6.11        rstantools_2.3.1     coda_0.19-4         
-[85] gridExtra_2.3        nlme_3.1-162         checkmate_2.2.0      zoo_1.8-12           pkgconfig_2.0.3     
+ [1] inline_0.3.19        rlang_1.1.4          magrittr_2.0.3       matrixStats_1.0.0   
+ [5] compiler_4.3.1       loo_2.7.0            callr_3.7.3          vctrs_0.6.4         
+ [9] stringr_1.5.1        pkgconfig_2.0.3      crayon_1.5.2         fastmap_1.1.1       
+[13] backports_1.4.1      ellipsis_0.3.2       labeling_0.4.3       utf8_1.2.4          
+[17] threejs_0.3.3        promises_1.2.0.1     markdown_1.7         ps_1.7.5            
+[21] nloptr_2.0.3         jsonlite_1.8.7       later_1.3.1          parallel_4.3.1      
+[25] prettyunits_1.1.1    R6_2.5.1             dygraphs_1.1.1.6     stringi_1.7.12      
+[29] boot_1.3-28.1        estimability_1.4.1   zoo_1.8-12           base64enc_0.1-3     
+[33] bayesplot_1.10.0     httpuv_1.6.11        Matrix_1.6-0         splines_4.3.1       
+[37] igraph_1.5.0         tidyselect_1.2.1     rstudioapi_0.15.0    abind_1.4-5         
+[41] codetools_0.2-19     miniUI_0.1.1.1       curl_5.2.1           processx_3.8.2      
+[45] pkgbuild_1.4.2       lattice_0.21-8       tibble_3.2.1         plyr_1.8.9          
+[49] shiny_1.7.4.1        withr_2.5.2          bridgesampling_1.1-2 posterior_1.5.0     
+[53] coda_0.19-4.1        survival_3.5-5       RcppParallel_5.1.7   xts_0.13.1          
+[57] pillar_1.9.0         tensorA_0.36.2       checkmate_2.2.0      DT_0.28             
+[61] stats4_4.3.1         shinyjs_2.1.0        distributional_0.3.2 generics_0.1.3      
+[65] rprojroot_2.0.3      rstantools_2.3.1     munsell_0.5.0        minqa_1.2.5         
+[69] gtools_3.9.4         glue_1.6.2           emmeans_1.8.9        tools_4.3.1         
+[73] shinystan_2.6.0      lme4_1.1-35.5        colourpicker_1.2.0   mvtnorm_1.2-2       
+[77] grid_4.3.1           crosstalk_1.2.0      colorspace_2.1-0     nlme_3.1-162        
+[81] cli_3.6.1            fansi_1.0.5          Brobdingnag_1.2-9    dplyr_1.1.2         
+[85] V8_4.3.2             gtable_0.3.4         digest_0.6.33        htmlwidgets_1.6.2   
+[89] farver_2.1.1         htmltools_0.5.5      lifecycle_1.0.4      mime_0.12           
+[93] shinythemes_1.2.0    MASS_7.3-60 
 ```
 
 
