@@ -102,4 +102,4 @@ loaded via a namespace (and not attached):
 
 ## Funding
 
-Primary funding was obtained from the Arts and Humanities Research Council UK (AHRC), who funded the lead author's Cambridge AHRC-Doctoral Training Partnership Scholarship (2112128). Additional funding was obtained from the Osk. Huttunen Foundation, the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (Grant agreement No. 101021480, REVERSEACTION project), St John's College, University of Cambridge, and the Department of Archaeology, University of Cambridge.
+Primary funding was obtained from the **Arts and Humanities Research Council UK (AHRC)**, who funded the lead author's Cambridge AHRC-Doctoral Training Partnership Scholarship (2112128). Additional funding was obtained from the **Osk. Huttunen Foundation**, the **European Research Council (ERC)** under the European Union’s Horizon 2020 research and innovation programme (Grant agreement No. 101021480, REVERSEACTION project), St John's College, University of Cambridge, and the Department of Archaeology, University of Cambridge.
