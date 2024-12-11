@@ -3,7 +3,7 @@
 This repository contains the data and scripts used in the manuscript:
 
 ```         
-  Vieri, J., Crema, E.R., Uribe Villegas, M.A., Sáenz Samper, J., Martinón-Torres, M., 2025. Beyond baselines of performance: Beta regression models of compositional variability in craft production studies. Journal of Archaeological Science 173, 106106. https://doi.org/10.1016/j.jas.2024.106106
+  Vieri, J. et al., 2025. Beyond baselines of performance: Beta regression models of compositional variability in craft production studies. Journal of Archaeological Science 173, 106106. https://doi.org/10.1016/j.jas.2024.106106
 
 ```
 
